@@ -77,9 +77,9 @@ async def set_afk(afk_e):
     afk_start = start_1.replace(microsecond=0)
     if string:
         AFKREASON = string
-        await afk_e.edit("**Going AFK!**")
+        await afk_e.edit("**ight imma head out**")
     else:
-        await afk_e.edit("**Going AFK!**")
+        await afk_e.edit("**ight imma head out**")
     if BOTLOG:
         await afk_e.client.send_message(BOTLOG_CHATID, "#AFK\nYou went AFK!")
     ISAFK = True
@@ -168,8 +168,8 @@ async def mention_afk(mention):
                 afk_since = f"`{int(seconds)}s` **ago**"
             if mention.sender_id not in USERS:
                 if AFKREASON:
-                    await mention.reply(f"My Master **{DEFAULTUSER}** Is **afk since** {afk_since}.\
-                        \n**Because my King is** `{AFKREASON}`")
+                    await mention.reply(f"My Kntl **{DEFAULTUSER}** Is **afk since** {afk_since}.\
+                        \n**Because i am** `{AFKREASON}`")
                 else:
                     await mention.reply(f"My King 👑 {DEFAULTUSER} 👑 is **afk Since** {afk_since}.\nand My King has left a word for you only: \n{AFKSK}\n`.` ")
                 USERS.update({mention.sender_id: 1})
