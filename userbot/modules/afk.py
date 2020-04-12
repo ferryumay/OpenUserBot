@@ -102,7 +102,7 @@ async def type_afk_is_not_true(notafk):
     afk_end = back_alive.replace(microsecond=0)
     if ISAFK:
         ISAFK = False
-        msg = await notafk.edit("**I'm heree !**")
+        msg = await notafk.edit("**Its Timmy Time !!!**")
         time.sleep(3)
         await msg.delete()
         if BOTLOG:
@@ -168,7 +168,7 @@ async def mention_afk(mention):
                 afk_since = f"`{int(seconds)}s` **ago**"
             if mention.sender_id not in USERS:
                 if AFKREASON:
-                    await mention.reply(f"**I'm AFK Right Now** **since** {afk_since}.\
+                    await mention.reply(f"**I'm AFK Right Now**, **since** {afk_since}.\
                         \n**Because i am** `{AFKREASON}`")
                 else:
                     await mention.reply(f"**I'm AFK Right Now**, **Since** {afk_since}.\nand a little proverb for you: \n{AFKSK}\n`.` ")
@@ -180,7 +180,7 @@ async def mention_afk(mention):
                         await mention.reply(f"**I'm AFK Right Now**, **since** {afk_since}.\
                             \n**Because i am** `{AFKREASON}`")
                     else:
-                        await mention.reply(f"**I'm AFK Right Now** **Since** {afk_since}.\nand a little proverb for you: \n{AFKSK}\n`.` ")
+                        await mention.reply(f"**I'm AFK Right Now**, **Since** {afk_since}.\nand a little proverb for you: \n{AFKSK}\n`.` ")
                     USERS[mention.sender_id] = USERS[mention.sender_id] + 1
                     COUNT_MSG = COUNT_MSG + 1
                 else:
@@ -244,19 +244,19 @@ async def afk_on_pm(sender):
                 afk_since = f"`{int(seconds)}s` **ago**"
             if sender.sender_id not in USERS:
                 if AFKREASON:
-                    await sender.reply(f"My Kntl **{DEFAULTUSER}** Is **afk since** {afk_since}.\
+                    await sender.reply(f"**I'm AFK Right Now**, **since** {afk_since}.\
                         \n**Because i am** `{AFKREASON}`")
                 else:
-                    await sender.replyf(f"My Kntl {DEFAULTUSER} is **afk Since** {afk_since}.\nand My Kntl has left a word for you only: \n{AFKSK}\n`.` ")
+                    await sender.replyf(f"**I'm AFK Right Now**, **since** {afk_since}.\nand My Kntl has left a word for you only: \n{AFKSK}\n`.` ")
                 USERS.update({sender.sender_id: 1})
                 COUNT_MSG = COUNT_MSG + 1
             elif apprv and sender.sender_id in USERS:
                 if USERS[sender.sender_id] % randint(2, 4) == 0:
                     if AFKREASON:
-                        await sender.reply(f"My Master **{DEFAULTUSER}** Is **afk since** {afk_since}.\
-                            \n**Because my King is** `{AFKREASON}`")
+                        await sender.reply(f"**I'm AFK Right Now**, **since** {afk_since}.\
+                            \n**Because i am** `{AFKREASON}`")
                     else:
-                        await sender.reply(f"My Kntl {DEFAULTUSER} is **afk Since** {afk_since}.\nand My Kntl has left a word for you only: \n{AFKSK}\n`.` ")
+                        await sender.reply(f"**I'm AFK Right Now**, **since** {afk_since}.\nand My Kntl has left a word for you only: \n{AFKSK}\n`.` ")
                     USERS[sender.sender_id] = USERS[sender.sender_id] + 1
                     COUNT_MSG = COUNT_MSG + 1
                 else:
