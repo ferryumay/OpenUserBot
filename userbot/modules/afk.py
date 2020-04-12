@@ -171,7 +171,7 @@ async def mention_afk(mention):
                     await mention.reply(f"**I'm AFK Right Now**, **since** {afk_since}.\
                         \n**Because i am** `{AFKREASON}`")
                 else:
-                    await mention.reply(f"**I'm AFK Right Now**, **Since** {afk_since}.\nand a little proverb for you: \n{AFKSK}\n`.` ")
+                    await mention.reply(f"**I'm AFK Right Now**, **Since** {afk_since}.\nand a few words for you: \n{AFKSK}\n`.` ")
                 USERS.update({mention.sender_id: 1})
                 COUNT_MSG = COUNT_MSG + 1
             elif mention.sender_id in USERS:
@@ -180,7 +180,7 @@ async def mention_afk(mention):
                         await mention.reply(f"**I'm AFK Right Now**, **since** {afk_since}.\
                             \n**Because i am** `{AFKREASON}`")
                     else:
-                        await mention.reply(f"**I'm AFK Right Now**, **Since** {afk_since}.\nand a little proverb for you: \n{AFKSK}\n`.` ")
+                        await mention.reply(f"**I'm AFK Right Now**, **Since** {afk_since}.\nand a few words for you: \n{AFKSK}\n`.` ")
                     USERS[mention.sender_id] = USERS[mention.sender_id] + 1
                     COUNT_MSG = COUNT_MSG + 1
                 else:
@@ -247,7 +247,7 @@ async def afk_on_pm(sender):
                     await sender.reply(f"**I'm AFK Right Now**, **since** {afk_since}.\
                         \n**Because i am** `{AFKREASON}`")
                 else:
-                    await sender.replyf(f"**I'm AFK Right Now**, **since** {afk_since}.\nand My Kntl has left a word for you only: \n{AFKSK}\n`.` ")
+                    await sender.replyf(f"**I'm AFK Right Now**, **since** {afk_since}.\nand a few words for you: \n{AFKSK}\n`.` ")
                 USERS.update({sender.sender_id: 1})
                 COUNT_MSG = COUNT_MSG + 1
             elif apprv and sender.sender_id in USERS:
@@ -256,7 +256,7 @@ async def afk_on_pm(sender):
                         await sender.reply(f"**I'm AFK Right Now**, **since** {afk_since}.\
                             \n**Because i am** `{AFKREASON}`")
                     else:
-                        await sender.reply(f"**I'm AFK Right Now**, **since** {afk_since}.\nand My Kntl has left a word for you only: \n{AFKSK}\n`.` ")
+                        await sender.reply(f"**I'm AFK Right Now**, **since** {afk_since}.\nand a few words for you: \n{AFKSK}\n`.` ")
                     USERS[sender.sender_id] = USERS[sender.sender_id] + 1
                     COUNT_MSG = COUNT_MSG + 1
                 else:
