@@ -168,19 +168,19 @@ async def mention_afk(mention):
                 afk_since = f"`{int(seconds)}s` **ago**"
             if mention.sender_id not in USERS:
                 if AFKREASON:
-                    await mention.reply(f"My Kntl **{DEFAULTUSER}** Is **afk since** {afk_since}.\
+                    await mention.reply(f"**I'm AFK Right Now** **since** {afk_since}.\
                         \n**Because i am** `{AFKREASON}`")
                 else:
-                    await mention.reply(f"My Kntl {DEFAULTUSER} is **afk Since** {afk_since}.\nand My Kntl has left a word for you only: \n{AFKSK}\n`.` ")
+                    await mention.reply(f"**I'm AFK Right Now**, **Since** {afk_since}.\nand a little proverb for you: \n{AFKSK}\n`.` ")
                 USERS.update({mention.sender_id: 1})
                 COUNT_MSG = COUNT_MSG + 1
             elif mention.sender_id in USERS:
                 if USERS[mention.sender_id] % randint(2, 4) == 0:
                     if AFKREASON:
-                        await mention.reply(f"My Kntl **{DEFAULTUSER}** Is **afk since** {afk_since}.\
+                        await mention.reply(f"**I'm AFK Right Now**, **since** {afk_since}.\
                             \n**Because i am** `{AFKREASON}`")
                     else:
-                        await mention.reply(f"My Kntl {DEFAULTUSER} 👑 is **afk Since** {afk_since}.\nand My Kntl has left a word for you only: \n{AFKSK}\n`.` ")
+                        await mention.reply(f"**I'm AFK Right Now** **Since** {afk_since}.\nand a little proverb for you: \n{AFKSK}\n`.` ")
                     USERS[mention.sender_id] = USERS[mention.sender_id] + 1
                     COUNT_MSG = COUNT_MSG + 1
                 else:
