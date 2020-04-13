@@ -169,7 +169,7 @@ async def mention_afk(mention):
             if mention.sender_id not in USERS:
                 if AFKREASON:
                     await mention.reply(f"**I'm AFK Right Now**, **since** {afk_since}.\
-                        \n**Because i am** `{AFKREASON}`")
+                        \n**Because I'm** `{AFKREASON}`")
                 else:
                     await mention.reply(f"**I'm AFK Right Now**, **Since** {afk_since}.\nand a few words for you: \n{AFKSK}\n`.` ")
                 USERS.update({mention.sender_id: 1})
@@ -178,7 +178,7 @@ async def mention_afk(mention):
                 if USERS[mention.sender_id] % randint(2, 4) == 0:
                     if AFKREASON:
                         await mention.reply(f"**I'm AFK Right Now**, **since** {afk_since}.\
-                            \n**Because i am** `{AFKREASON}`")
+                            \n**Because I'm** `{AFKREASON}`")
                     else:
                         await mention.reply(f"**I'm AFK Right Now**, **Since** {afk_since}.\nand a few words for you: \n{AFKSK}\n`.` ")
                     USERS[mention.sender_id] = USERS[mention.sender_id] + 1
@@ -245,7 +245,7 @@ async def afk_on_pm(sender):
             if sender.sender_id not in USERS:
                 if AFKREASON:
                     await sender.reply(f"**I'm AFK Right Now**, **since** {afk_since}.\
-                        \n**Because i am** `{AFKREASON}`")
+                        \n**Because I'm** `{AFKREASON}`")
                 else:
                     await sender.replyf(f"**I'm AFK Right Now**, **since** {afk_since}.\nand a few words for you: \n{AFKSK}\n`.` ")
                 USERS.update({sender.sender_id: 1})
@@ -254,7 +254,7 @@ async def afk_on_pm(sender):
                 if USERS[sender.sender_id] % randint(2, 4) == 0:
                     if AFKREASON:
                         await sender.reply(f"**I'm AFK Right Now**, **since** {afk_since}.\
-                            \n**Because i am** `{AFKREASON}`")
+                            \n**Because I'm** `{AFKREASON}`")
                     else:
                         await sender.reply(f"**I'm AFK Right Now**, **since** {afk_since}.\nand a few words for you: \n{AFKSK}\n`.` ")
                     USERS[sender.sender_id] = USERS[sender.sender_id] + 1
