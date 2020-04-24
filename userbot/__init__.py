@@ -124,6 +124,9 @@ TZ_NUMBER = int(os.environ.get("TZ_NUMBER", 1))
 # Clean Welcome
 CLEAN_WELCOME = sb(os.environ.get("CLEAN_WELCOME", "True"))
 
+# Quotes API Token
+QUOTES_API_TOKEN = os.environ.get("QUOTES_API_TOKEN", None)
+
 # Last.fm Module
 BIO_PREFIX = os.environ.get("BIO_PREFIX", None)
 DEFAULT_BIO = os.environ.get("DEFAULT_BIO", None)
